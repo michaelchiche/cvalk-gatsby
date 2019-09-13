@@ -1,0 +1,23 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@tailwind screens;
+
+html,
+body {
+  background-color: #111014;
+  color: #9b96a9;
+  font-family: 'DM Sans';
+  min-height: 100%;
+}
+
+.cvalk-menu {
+  background-color: #111014;
+}
+
+/* main {
+  background-color: #9b26a9;
+} */

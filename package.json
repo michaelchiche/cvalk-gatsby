@@ -1,0 +1,61 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "@types/react-helmet": "^5.0.8",
+    "date-fns": "^2.1.0",
+    "gatsby": "^2.13.18",
+    "gatsby-image": "^2.2.6",
+    "gatsby-plugin-manifest": "^2.2.3",
+    "gatsby-plugin-offline": "^2.2.3",
+    "gatsby-plugin-postcss": "^2.1.2",
+    "gatsby-plugin-purgecss": "^4.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sharp": "^2.2.6",
+    "gatsby-plugin-typescript": "^2.1.5",
+    "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-source-graphql": "^2.1.12",
+    "gatsby-transformer-sharp": "^2.2.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "tailwindcss": "^1.1.2",
+    "typeface-dm-sans": "0.0.76",
+    "voca": "^1.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2",
+    "@graphql-codegen/typescript": "^1.7.0",
+    "@graphql-codegen/typescript-operations": "^1.7.0",
+    "@types/graphql": "^14.5.0",
+    "@graphql-codegen/cli": "^1.7.0",
+    "@types/date-fns": "^2.6.0",
+    "@types/voca": "^1.4.0",
+    "autoprefixer": "^9.6.1",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "gql": "graphql-codegen --config ./config.yml",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
