@@ -31,7 +31,7 @@ const LayoutWithMenu: React.FC = ({ children }) => {
                 {!isOpen ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 36 36"
                     width="36"
                     height="36"
                     fill="currentColor"
@@ -41,8 +41,11 @@ const LayoutWithMenu: React.FC = ({ children }) => {
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    className="h-6 w-6 fill-current"
+                    viewBox="0 0 36 36"
+                    width="36"
+                    height="36"
+                    fill="currentColor"
+                    // className="h-6 w-6 fill-current"
                   >
                     <path
                       fill-rule="evenodd"
@@ -55,8 +58,8 @@ const LayoutWithMenu: React.FC = ({ children }) => {
             </div>
           </div>
           {isOpen && (
-            <div>
-              <ul>
+            <div className="my-12">
+              <ul className="flex flex-col items-center content-center">
                 <li className="mt-2 leading-loose font-bold tracking-widest hover:text-white">
                   <Link
                     to="/copies"
