@@ -2,21 +2,27 @@ import React from 'react';
 import LayoutWithMenu from '../components/layoutWithMenu';
 import Gallery from '../components/gallery';
 import { graphql } from 'gatsby';
-import { Cvalk } from '../graphqlTypes';
+import { Cvalk, CvalkLogoQuery } from '../graphqlTypes';
 const CategoryTemplate = ({
   data,
 }: {
   data: {
-    cvalk: { paintings: Cvalk['paintings']; category: Cvalk['category'] };
+    cvalk: {
+      paintings: Cvalk['paintings'];
+      category: Cvalk['category'];
+    };
+    logoImage: CvalkLogoQuery['logoImage'];
   };
-}) => (
-  <LayoutWithMenu>
-    <Gallery
-      paintings={data.cvalk.paintings}
-      category={data.cvalk.category}
-    ></Gallery>
-  </LayoutWithMenu>
-);
+}) => {
+  return (
+    <LayoutWithMenu logoSrc={data.logoImage!.fluid!.src!}>
+      <Gallery
+        paintings={data.cvalk.paintings}
+        category={data.cvalk.category}
+      ></Gallery>
+    </LayoutWithMenu>
+  );
+};
 
 export const query = graphql`
   query paintingsByCategory($where: cvalk_JSON!, $id: ID!) {
@@ -39,6 +45,11 @@ export const query = graphql`
       }
       category(id: $id) {
         title
+      }
+    }
+    logoImage: imageSharp(resize: { originalName: { eq: "cvalk.png" } }) {
+      fluid(maxHeight: 100) {
+        src
       }
     }
   }
