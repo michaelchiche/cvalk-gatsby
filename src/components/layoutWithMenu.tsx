@@ -5,18 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
 import 'typeface-dm-sans';
 import './layout.css';
 
-const cvalkLogo = require('../images/cvalk.png');
-
-const LayoutWithMenu: React.FC = ({ children }) => {
+const LayoutWithMenu: React.FC<{ logoSrc: string }> = ({
+  children,
+  logoSrc,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  console.log(isOpen);
 
   return (
     <div className="p-4 xl:p-32 xl:flex xl:flex-row xl:h-screen xl:m-0 overflow-x-hidden xl:overflow-y-auto">
@@ -24,7 +23,7 @@ const LayoutWithMenu: React.FC = ({ children }) => {
         <div className="w-full h-auto xl:hidden">
           <div className="flex justify-between">
             <Link to="/" className="flex-shrink w-2/5">
-              <img src={cvalkLogo} alt="cvalk" />
+              <img src={logoSrc} alt="cvalk" />
             </Link>
             <div className="flex items-center text-gray-600 hover:text-gray-200">
               <button onClick={() => setIsOpen(!isOpen)}>
@@ -95,7 +94,7 @@ const LayoutWithMenu: React.FC = ({ children }) => {
           <div className="menu hidden xl:block xl:w-1/4 relative xl:mt-16 mr-12 flex-shrink-0 top-0 mt-4 ">
             <div className="xl:fixed w-1/4">
               <Link to="/">
-                <img src={cvalkLogo} alt="cvalk" />
+                <img src={logoSrc} alt="cvalk" />
               </Link>
 
               <div className="mt-12">

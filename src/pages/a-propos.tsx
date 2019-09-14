@@ -2,11 +2,27 @@ import React from 'react';
 
 import LayoutWithMenu from '../components/layoutWithMenu';
 import SEO from '../components/seo';
+import { graphql } from 'gatsby';
 
-const profile = require('../images/profile.jpg');
+// const profile = require('../images/profile.jpg');
 
-const IndexPage = ({}) => (
-  <LayoutWithMenu>
+export const AboutQuery = graphql`
+  query AboutQuery {
+    logoImage: imageSharp(resize: { originalName: { eq: "cvalk.png" } }) {
+      fluid(maxHeight: 100) {
+        src
+      }
+    }
+    profileImage: imageSharp(resize: { originalName: { eq: "profile.jpg" } }) {
+      fluid(maxHeight: 400) {
+        src
+      }
+    }
+  }
+`;
+
+const IndexPage: React.FC<{ data?: any }> = ({ data }) => (
+  <LayoutWithMenu logoSrc={data.logoImage.fluid.src}>
     <SEO title="A Propos" />
     <div className="content flex flex-col-reverse w-full border-gray-900  xl:mt-auto xl:flex-row xl:flex-row xl:ml-20 xl:border-l-2">
       <div className="xl:w-2/3 xl:px-10">
@@ -60,7 +76,11 @@ const IndexPage = ({}) => (
         </div>
       </div>
       <div className="h-auto w-full xl:w-1/3">
-        <img className="w-full" src={profile} alt="CValerieK" />
+        <img
+          className="w-full"
+          src={data.profileImage.fluid.src}
+          alt="CValerieK"
+        />
       </div>
     </div>
   </LayoutWithMenu>
