@@ -36,7 +36,7 @@ const IndexPage: React.FC<{ data?: any }> = ({ data }) => {
         </Link>
         <Link
           to="/creations"
-          className="bg-cover bg-center h-64 xl:h-full w-full xl:w-2/5 relative group mt-8"
+          className="bg-cover bg-center h-64 xl:h-full w-full xl:w-2/5 relative group mt-8 xl:mt-0"
           style={{
             backgroundImage:
               'url(https://res.cloudinary.com/cvalk/image/upload/w_700,h_700,c_fit/v1567809520/tzpjbdv0t90nolfibonc.jpg)',
