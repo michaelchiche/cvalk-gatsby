@@ -18,7 +18,7 @@ const LayoutWithMenu: React.FC<{ logoSrc: string }> = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="p-4 xl:p-32 xl:flex xl:flex-row xl:h-screen xl:m-0 overflow-x-hidden xl:overflow-y-auto">
+    <div className="p-4 xl:p-24 xl:flex xl:flex-row xl:h-screen xl:m-0 overflow-x-hidden xl:overflow-y-auto">
       <div className="xl:w-1/3 z-50 top-0 py-4 xl:static">
         <div className="w-full h-auto xl:hidden">
           <div className="flex justify-between">

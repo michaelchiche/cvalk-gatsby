@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div className="xl:p-32 p-8 h-screen">
+    <div className="xl:p-24 p-8 h-screen">
       <main className="w-full h-full">{children}</main>
     </div>
   );
