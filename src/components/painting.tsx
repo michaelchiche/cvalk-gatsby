@@ -37,12 +37,10 @@ const Painting: React.FC<{
         </picture>
 
         <div className="xl:w-1/2 xl:ml-5 flex-grow">
-          <h3 className="xl:font-bold xl:text-xl xl:text-white">
+          <h3 className="font-bold text-xl text-white xl:mt-0 mt-5">
             {gallery!.title}
           </h3>
-          <h2 className="xl:font-black xl:text-3xl xl:my-5 xl:text-white">
-            {title}
-          </h2>
+          <h2 className="font-black text-3xl my-5 text-white">{title}</h2>
           <ul className="font-bold">
             {gallery!.category!.id === '1' && (
               <li>
